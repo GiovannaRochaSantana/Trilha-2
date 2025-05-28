@@ -1,64 +1,24 @@
-/* Zerando margens e preenchimentos */
-* {
-    margin: 0; /* Remove a margem de todos os elementos */
-    padding: 0; /* Remove o preenchimento de todos os elementos */
-    box-sizing: border-box; /* Ajusta o modelo de caixa para incluir bordas e preenchimento no tamanho do elemento */
-}
-
-/* Corpo da página */
 body {
-    font-family: Arial, sans-serif; /* Define a fonte da página */
-    background-color: #f4f4f9; /* Cor de fundo da página */
-    display: flex; /* Utiliza Flexbox para organizar o layout */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Altura da tela inteira */
+  font-family: sans-serif;
+  background: #eee;
+  text-align: center;
+  padding-top: 50px;
 }
 
-/* Container principal */
-.container {
-    background-color: white; /* Cor de fundo do container */
-    padding: 20px; /* Preenchimento interno do container */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave no container */
-    text-align: center; /* Alinha o texto ao centro */
-    width: 250px; /* Largura fixa do container */
+.caixa {
+  background: branco;
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
-/* Título */
-h1 {
-    color: #4CAF50; /* Cor verde para o título */
-    font-size: 22px; /* Tamanho da fonte do título */
+input, button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
 }
 
-/* Campo de entrada */
-input {
-    width: 100%; /* O campo de entrada ocupa toda a largura do container */
-    padding: 8px; /* Preenchimento interno do campo */
-    margin: 10px 0; /* Margem entre o campo de entrada e os outros elementos */
-    border: 1px solid #ccc; /* Borda cinza clara no campo */
-    border-radius: 4px; /* Bordas arredondadas no campo */
+#exibicao-valor {
+  font-size: 60px;
+  margin-top: 20px;
 }
-
-/* Botão */
-button {
-    width: 100%; /* O botão ocupa toda a largura do container */
-    padding: 10px; /* Preenchimento interno do botão */
-    background-color: #4CAF50; /* Cor de fundo verde para o botão */
-    color: white; /* Cor do texto (branco) no botão */
-    border: none; /* Sem borda no botão */
-    border-radius: 4px; /* Bordas arredondadas no botão */
-    cursor: pointer; /* Aparece como cursor de clique */
-}
-
-button:hover {
-    background-color: #45a049; /* Cor de fundo mais escura quando o botão é hover */
-}
-
-/* Área de exibição da tabuada */
-#tabuada {
-    margin-top: 15px; /* Espaço entre a área da tabuada e os outros elementos */
-    font-size: 16px; /* Tamanho da fonte do texto da tabuada */
-    color: #333; /* Cor do texto (cinza escuro) */
-}
-

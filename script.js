@@ -1,24 +1,36 @@
-// Função para gerar a tabuada
-function gerarTabuada() {
-    // Pega o valor digitado pelo usuário
-    const numero = document.getElementById('numero').value;
-    // Pega a área onde a tabuada será exibida
-    const areaTabuada = document.getElementById('tabuada');
-    
-    // Verifica se o campo de número está vazio
-    if (numero === "") {
-        alert("Por favor, insira um número!");
-        return;
-    }
+let valor = 0;
+let limite = 0;
+let intervalo = null;
 
-    // Variável para armazenar o resultado da tabuada
-    let resultado = `<h2>Tabuada de ${numero}:</h2>`;
-    
-    // Laço para gerar a tabuada de 1 até 10
-    for (let i = 1; i <= 10; i++) {
-        resultado += `<p>${numero} x ${i} = ${numero * i}</p>`; // Adiciona cada linha da tabuada
+const exibicao = document.getElementById("exibicao-valor");
+const entrada = document.getElementById("entrada-limite");
+const botaoComecar = document.getElementById("botao-comecar");
+const botaoParar = document.getElementById("botao-parar");
+
+botaoComecar.onclick = () => {
+  if (intervalo) return;
+
+  limite = parseInt(entrada.value);
+  if (isNaN(limite) || limite < 1) {
+    alert("Digite um número válido para o limite.");
+    return;
+  }
+
+  valor = 0;
+  exibicao.textContent = valor;
+
+  intervalo = setInterval(() => {
+    valor++;
+    if (valor > limite) {
+      clearInterval(intervalo);
+      intervalo = null;
+    } else {
+      exibicao.textContent = valor;
     }
-    
-    // Exibe a tabuada gerada
-    areaTabuada.innerHTML = resultado;
-}
+  }, 300);
+};
+
+botaoParar.onclick = () => {
+  clearInterval(intervalo);
+  intervalo = null;
+};
